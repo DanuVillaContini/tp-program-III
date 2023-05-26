@@ -1,19 +1,13 @@
 
 import './App.css';
-import'./gridLayout';
-import Grid from './gridLayout';
+import'./Componentes/GridLayout';
+import Grid from './Componentes/GridLayout';
 // import ListaMiembros from './lista';
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        
-        
-      </header> */}
-      <Grid/>
-      {/* <ListaMiembros/> */}
-      
+      <Grid/>      
     </div>
   );
 }

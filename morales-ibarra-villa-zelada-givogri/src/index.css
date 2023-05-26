@@ -11,25 +11,27 @@
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
-body{
-  
+body {
+
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.grid-layout{
-  height: 500px;
-  display:grid;
-  grid-template-areas:'cabecera cabecera'
-                      'menu menu'
-                      'contenido lateral'
-                      'footer footer';
-  grid-template-columns: 80% auto;
-  grid-template-rows: 20% 20% auto 20%;
+
+.grid-layout {
+  height: 100%;
+  display: grid;
+  grid-template-areas: 'cabecera cabecera'
+    'menu menu'
+    'contenido lateral'
+    'footer footer';
+  grid-template-columns: 60% auto;
+  grid-template-rows: auto;
 
 }
- .caja{
+
+.caja {
   background-color: blue;
   border: 1px solid black;
-  
+
 
   /* display:flex;
   justify-content: center;
@@ -39,31 +41,37 @@ body{
    margin:10px; 
    float:left;  */
 }
-.c1{
-   grid-area:cabecera;
-   /* grid-column: 1/3;   */
+
+.c1 {
+  grid-area: cabecera;
+  /* grid-column: 1/3;   */
   background-color: cadetblue;
 }
-.c2{
-   grid-area:menu;
-   /* grid-row:2/4;   */
+
+.c2 {
+  grid-area: menu;
+  /* grid-row:2/4;   */
   background-color: rgb(27, 215, 99);
 }
-.c3{
-   grid-area:contenido;
-   /* grid-row: 2/span 2;   */
-   background-color: rgb(121, 3, 238);
-  
-} 
- .c4{
-   grid-area:lateral; 
+
+.c3 {
+  grid-area: contenido;
+  /* grid-row: 2/span 2;   */
+  background-color: rgb(121, 3, 238);
+
+}
+
+.c4 {
+  grid-area: lateral;
   background-color: rgb(211, 26, 26);
 }
-.c5{
-   grid-area:footer; 
+
+.c5 {
+  grid-area: footer;
   background-color: rgb(93, 6, 244);
-} 
-.listaNazi{
+}
+
+/* .listaNazi {
   list-style: none;
   background-color: transparent;
-}
+} */
