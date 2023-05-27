@@ -30,7 +30,7 @@ body {
 
 .caja {
   background-color: blue;
-  border: 1px solid black;
+  border: 2px solid rgb(12, 243, 12);
 
 
   /* display:flex;
@@ -51,27 +51,32 @@ body {
 .c2 {
   grid-area: menu;
   /* grid-row:2/4;   */
-  background-color: rgb(27, 215, 99);
+  background-color: rgb(65, 75, 68);
 }
 
 .c3 {
   grid-area: contenido;
   /* grid-row: 2/span 2;   */
-  background-color: rgb(121, 3, 238);
+  background-color: rgb(229, 112, 112);
 
 }
 
 .c4 {
   grid-area: lateral;
-  background-color: rgb(211, 26, 26);
+  background-color: rgb(81, 173, 201);
 }
 
 .c5 {
   grid-area: footer;
-  background-color: rgb(93, 6, 244);
+  background-color: rgb(148, 107, 218);
 }
 
 /* .listaNazi {
   list-style: none;
   background-color: transparent;
 } */
+
+
+.debug{
+  border: 1px solid black;
+}
