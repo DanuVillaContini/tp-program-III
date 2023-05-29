@@ -24,10 +24,11 @@ function ListaMiembros() {
               <ListGroup.Item key={alumno.id}>{alumno.miembro}{" "}{alumno.pertenece ? (<span>✔️</span>) : (<span>❌</span>)}</ListGroup.Item>
             ))
           }
+          
         </ListGroup>
     </Card>
     </>
-
+    
   );
 }
 
