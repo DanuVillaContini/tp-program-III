@@ -1,5 +1,5 @@
 import { Button, Card, Container } from "react-bootstrap";
-// import grupo from '../Img/grupo.jpeg' 
+// import imgTelta from '../Img/tesla1.avif';
 
 export default function CardMiembros() {
     return (
@@ -16,6 +16,7 @@ export default function CardMiembros() {
                 </Card.Body>
             </Card>
             </Container>
+            {/* <a href="/register"><img src={imgTelta} alt="" /></a> */}
         </>
     )
 }
