@@ -1,8 +1,16 @@
-import React from 'react'
+import RenderizadoShop from '../Componentes/RenderizadoShop'
+import MenuNavegacion from '../Componentes/MenuNavegacion'
+
 
 function Shop() {
     return (
-        <div>Shop</div>
+        <>
+            <MenuNavegacion/>
+            <div className="d-flex justify-content-center bg-dark debug">
+                <RenderizadoShop/>
+
+            </div>
+        </>
     )
 }
 

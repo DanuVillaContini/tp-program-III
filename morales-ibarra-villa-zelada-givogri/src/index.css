@@ -77,6 +77,89 @@ body {
 } */
 
 
-.debug{
+.debug {
   border: 1px solid black;
+}
+
+
+/* -------[COMPONENTE RENDERIZADO SHOP]------- */
+/* -------container render shop ------ */
+.custom-container-shop {}
+
+/* -------Input search de shop ------ */
+.wrapper-input-search {
+  position: relative;
+  --size-button: 40px;
+}
+
+.input-search {
+  padding-left: var(--size-button);
+  height: var(--size-button);
+  font-size: 15px;
+  border: none;
+  color: #fff;
+  outline: none;
+  width: var(--size-button);
+  transition: all ease 0.3s;
+  background-color: #191A1E;
+  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.input-search:focus,
+.input-search:not(:invalid) {
+  width: 200px;
+  cursor: text;
+  box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
+}
+
+.input-search:focus+.icon-search,
+.input-search:not(:invalid)+.icon-search {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.wrapper-input-search .icon-search {
+  position: absolute;
+  width: var(--size-button);
+  height: var(--size-button);
+  top: 0;
+  left: 0;
+  padding: 8px;
+  pointer-events: none;
+}
+
+.wrapper-input-search .icon-search svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ----card Shop------ */
+.custom-card-shop {
+  width: 48vw;
+  height:auto;
+  border-radius: 20px;
+  background-image: linear-gradient(163deg, #008cff 0%, #7700ff 100%);
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+    -15px -15px 30px rgb(60, 60, 60);
+  transition: all .3s;
+
+}
+
+.custom-card-shop2 {
+  width: 48vw;
+  height: auto;
+  border-radius: 18px ;
+  background-color: #1a1a1a;
+  transition: all .2s;
+}
+
+.custom-card-shop2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.custom-card-shop:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
 }
