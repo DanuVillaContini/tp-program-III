@@ -1,5 +1,6 @@
 import { Container, Navbar, Nav } from 'react-bootstrap'
 
+
 function MenuNavegacion() {
     return (
         <>
@@ -8,11 +9,11 @@ function MenuNavegacion() {
                     <Nav className="me-auto">
                         <Nav.Link href="#home">Inicio</Nav.Link>
                         <Nav.Link href="#features">Administracion</Nav.Link>
-                        <Nav.Link href="#pricing">Carreras</Nav.Link>
+                        <Nav.Link href="/registrarse">Registrarse</Nav.Link>
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
-                            Mi Perfil : <a href="#login">Loguearse</a>
+                            Mi Perfil : <a href='/login'>Login</a>
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>

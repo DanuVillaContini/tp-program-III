@@ -1,11 +1,24 @@
 import'./Componentes/GridLayout';
-import Grid from './Componentes/GridLayout';
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Home from "./screen/Home";
+import Shop from "./screen/Shop";
+import AboutUs from "./screen/AboutUs";
+import Register from "./screen/Register";
+import Login from "./screen/Login";
 
 function App() {
   return (
-    <div className="App">
-      <Grid/>      
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path="/Shop" element={<Shop/>}></Route>
+          <Route path="/aboutUs" element={<AboutUs/>}></Route>
+          <Route path="/registrarse" element={<Register/>}></Route>
+          <Route path="/login" element={<Login/>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
