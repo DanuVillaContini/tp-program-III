@@ -138,7 +138,7 @@ body {
 /* ----card Shop------ */
 .custom-card-shop {
   width: 48vw;
-  height:auto;
+  height: auto;
   border-radius: 20px;
   background-image: linear-gradient(163deg, #008cff 0%, #7700ff 100%);
   box-shadow: 15px 15px 30px rgb(25, 25, 25),
@@ -150,7 +150,7 @@ body {
 .custom-card-shop2 {
   width: 48vw;
   height: auto;
-  border-radius: 18px ;
+  border-radius: 18px;
   background-color: #1a1a1a;
   transition: all .2s;
 }
@@ -162,4 +162,59 @@ body {
 
 .custom-card-shop:hover {
   box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+/* ------------SCREAM /ABOUTUS ----------- */
+.wrapper-cards-aboutus{
+  height: 45vw;
+}
+.card-miembro {
+  height: 254px;
+  width: 190px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 16px;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+  -15px -15px 30px rgb(60, 60, 60);
+  overflow: hidden;
+}
+
+/*Image*/
+.card-miembro-image {
+  height: 40vw;
+  width: 40vw;
+  position: absolute;
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background: #0a3394;
+  background: linear-gradient(to top, #223665c8, #000000);
+}
+.card-miembro-image img{
+  height: 14vw;
+  width: 14vw;
+  margin: 10px;
+
+}
+/*Description */
+.card-miembro-description {
+  display: flex;
+  position: absolute;
+  gap: .5em;
+  flex-direction: column;
+  background-color: #cac8c8;
+  color: #212121;
+  height: 70%;
+  bottom: 0;
+  border-radius: 16px;
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 1rem;
+}
+.card-miembro-title {
+  font-size: 1.2rem;
+}
+.card-miembro-body {
+  font-size: 1rem;
+  line-height: 130%;
+}
+.card-miembro:hover .card-miembro-description {
+  transform: translateY(100%);
 }

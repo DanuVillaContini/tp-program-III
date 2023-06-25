@@ -1,5 +1,4 @@
 import { Container, Row} from "react-bootstrap"
-import BasicGroupButtons from "./BasicGroupButtons"
 
 
 function Footer() {
@@ -12,7 +11,7 @@ function Footer() {
                     <span>Todos los derechos Reservados &copy;</span>
                 </Row>
                 <Row className="my-2">
-                    <BasicGroupButtons/>
+
                 </Row>
             </Container>
         </footer>
