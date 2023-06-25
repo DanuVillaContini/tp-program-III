@@ -20,7 +20,7 @@ function AboutUs() {
     return (
         <>
             <MenuNavegacion />
-            <div className="text-center text-light bg-dark p-2"><h1>Equipo de Desarrollo:</h1></div>
+            <div className="text-center bg-dark p-2 card-miembro-title"><h1>Equipo de Desarrollo:</h1></div>
             <div className="d-flex bg-dark justify-content-between wrapper-cards-aboutus">
                 {
                     arrayMiembrosGrupo.map((miembro) => (

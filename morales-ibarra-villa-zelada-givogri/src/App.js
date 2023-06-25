@@ -5,6 +5,7 @@ import Shop from "./screen/Shop";
 import AboutUs from "./screen/AboutUs";
 import Register from "./screen/Register";
 import Login from "./screen/Login";
+import Error from "./screen/Error";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/aboutUs" element={<AboutUs/>}></Route>
           <Route path="/register" element={<Register/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
+          <Route path="/error" element={<Error/>}></Route>
         </Routes>
       </BrowserRouter>
     </>

@@ -1,21 +1,58 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
 body {
 
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
+/* --------IMPUTS Y BUTTONS GENERICOS FORMS------ */
+.btt-generico {
+  --bg: #000;
+  --hover-bg: rgb(28, 28, 30);
+  --hover-text: skyblue;
+  color: #fff;
+  border: 1px solid var(--bg);
+  box-shadow: 0 0 .5vw rgba(146, 146, 146, 0.4), 0 0 0 .16vw transparent;
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+}
+
+.btt-generico:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.btt-generico:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+.input-generico {
+  color: #fff;
+  background-color: rgb(28, 28, 30);
+  box-shadow: 0 0 .5vw rgba(146, 146, 146, 0.4), 0 0 0 .16vw transparent;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  padding: 0.4vw;
+  max-width: 190px;
+  transition: .4s;
+}
+
+.input-generico:hover {
+  box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+}
+
+.input-generico:focus {
+  box-shadow: 0 0 0 .15vw skyblue;
+}
+
+
+
+/* -------[COMPONENTE GRID LOYOUT]------- */
 .grid-layout {
   height: 100%;
   display: grid;
@@ -25,21 +62,10 @@ body {
     'footer footer';
   grid-template-columns: 60% auto;
   grid-template-rows: auto;
-
 }
-
 .caja {
   background-color: blue;
   border: 2px solid rgb(12, 243, 12);
-
-
-  /* display:flex;
-  justify-content: center;
-  align-items: center; 
-   height: 150px;
-  width: 150px; 
-   margin:10px; 
-   float:left;  */
 }
 
 .c1 {
@@ -71,21 +97,11 @@ body {
   background-color: rgb(148, 107, 218);
 }
 
-/* .listaNazi {
-  list-style: none;
-  background-color: transparent;
-} */
-
-
 .debug {
   border: 1px solid black;
 }
 
-
 /* -------[COMPONENTE RENDERIZADO SHOP]------- */
-/* -------container render shop ------ */
-.custom-container-shop {}
-
 /* -------Input search de shop ------ */
 .wrapper-input-search {
   position: relative;
@@ -134,8 +150,7 @@ body {
   width: 100%;
   height: 100%;
 }
-
-/* ----card Shop------ */
+/* -- card Shop -- */
 .custom-card-shop {
   width: 48vw;
   height: auto;
@@ -144,9 +159,7 @@ body {
   box-shadow: 15px 15px 30px rgb(25, 25, 25),
     -15px -15px 30px rgb(60, 60, 60);
   transition: all .3s;
-
 }
-
 .custom-card-shop2 {
   width: 48vw;
   height: auto;
@@ -154,18 +167,28 @@ body {
   background-color: #1a1a1a;
   transition: all .2s;
 }
-
 .custom-card-shop2:hover {
   transform: scale(0.98);
   border-radius: 20px;
 }
-
 .custom-card-shop:hover {
   box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
 }
 
-/* ------------SCREAM /ABOUTUS ----------- */
-.wrapper-cards-aboutus{
+
+/* -------- [COMPONENTE MODALEXITO] ------- */
+.custom-modal {
+  background-color: #1a1a1a;
+  color: #fff;
+  border-radius: 0.4vw;
+  border: none;
+  box-shadow: 0 0 0 .15vw skyblue;
+
+}
+
+
+/* ------------[SCREAM /ABOUTUS - CARDS] ----------- */
+.wrapper-cards-aboutus {
   height: 45vw;
 }
 .card-miembro {
@@ -175,11 +198,9 @@ body {
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   border-radius: 16px;
   box-shadow: 15px 15px 30px rgb(25, 25, 25),
-  -15px -15px 30px rgb(60, 60, 60);
+    -15px -15px 30px rgb(60, 60, 60);
   overflow: hidden;
 }
-
-/*Image*/
 .card-miembro-image {
   height: 40vw;
   width: 40vw;
@@ -188,13 +209,17 @@ body {
   background: #0a3394;
   background: linear-gradient(to top, #223665c8, #000000);
 }
-.card-miembro-image img{
+.card-miembro-image img {
   height: 14vw;
   width: 14vw;
   margin: 10px;
-
 }
-/*Description */
+.card-miembro-title h1 {
+  --c: #807e7e;
+  color: #5f5e5e;
+  text-shadow: calc(var(--_i, -1)* 0.08em) -.01em 0 var(--c),
+    calc(var(--_i, -1)*-0.08em) .01em 2px #0004;
+}
 .card-miembro-description {
   display: flex;
   position: absolute;
@@ -217,4 +242,92 @@ body {
 }
 .card-miembro:hover .card-miembro-description {
   transform: translateY(100%);
+}
+
+
+
+/* -------[SCREEN LOGIN - CARD]------- */
+.custom-card-login {
+  width: 36vw;
+  height: 40vw;
+  border-radius: 20px;
+  background: linear-gradient(#212121, #212121) padding-box,
+    linear-gradient(145deg, transparent 35%, #ca1cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+    -15px -15px 30px rgb(60, 60, 60);
+  transition: all .3s;
+  scale: 0.95;
+}
+
+.custom-card-login2 {
+  width: 36vw;
+  height: 40vw;
+  border-radius: 18px;
+  background-color: #1a1a1a;
+  transition: all .2s;
+  position: relative;
+}
+
+.custom-card-login2 h2 {
+  --c: #807e7e;
+  color: #5f5e5e;
+  text-shadow: calc(var(--_i, -1)* 0.08em) -.01em 0 var(--c),
+    calc(var(--_i, -1)*-0.08em) .01em 2px #0004;
+}
+
+.custom-card-login2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.custom-card-login:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 89, 255, 0.3);
+}
+
+
+
+
+/* ---------- [SCREEN ERROR404 ]------- */
+.bg-error404 {
+  background-image: url(../src/Img/bg-error404.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-bg-error404 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.559); 
+}
+.wrapper-icon-error404 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.icon-error404 {
+  width: 200px;
+  height: auto;
+}
+
+.wrapper-icon-error404 button {
+  margin-top: 20px;
+}
+
+.wrapper-icon-error404 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

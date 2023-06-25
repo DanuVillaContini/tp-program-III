@@ -1,3 +1,22 @@
+<!-- -------- NAVEGACION GENERICA ERROR404 ------- -->
+
+    <!-- import { useNavigate } from 'react-router-dom';
+
+    const navigate = useNavigate();
+    const handleNavError = () => {
+        navigate('/error')
+    }
+    return (
+
+        <Button onClick={handleNavError} variant='primary' className='my-1'>Ver más</Button>
+
+    )                      -->
+
+<!-- -------- NAVEGACION GENERICA ERROR404 ------- -->
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

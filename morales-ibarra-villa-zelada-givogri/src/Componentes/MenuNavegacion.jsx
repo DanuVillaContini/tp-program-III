@@ -7,13 +7,14 @@ function MenuNavegacion() {
             <Navbar bg="dark" variant="dark" sticky="top">
                 <Container>
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Inicio</Nav.Link>
-                        <Nav.Link href="#features">Administracion</Nav.Link>
-                        <Nav.Link href="/registrarse">Registrarse</Nav.Link>
+                        <Nav.Link href="/">Inicio</Nav.Link>
+                        <Nav.Link href="/aboutus">About us</Nav.Link>
+                        <Nav.Link href="/shop">Shop</Nav.Link>
+                        <Nav.Link href="/register">Registrarse</Nav.Link>
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
-                            Mi Perfil : <a href='/login'>Login</a>
+                            Mi Perfil : <a href='/login'>Log in</a>
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>

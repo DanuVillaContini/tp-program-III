@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import ModalExito from '../Componentes/ModalExito';
 import { useNavigate } from 'react-router-dom';
+import { Col, Container, Row } from 'react-bootstrap';
+import MenuNavegacion from '../Componentes/MenuNavegacion';
+import NavLoginRegister from '../Componentes/NavLoginRegister';
+
 
 function Login() {
 
@@ -48,36 +52,56 @@ function Login() {
     }
     return (
         <>
-            <form
-                onSubmit={ev => {
-                    ev.preventDefault();
-                    handleLogin(user, password);
-                }}
-            >
-                <input
-                    type='user'
-                    name='user'
-                    placeholder='User'
-                    autoComplete='off'
-                    value={user}
-                    onChange={ev => setUser(ev.target.value)}
-                ></input>
-                <input
-                    type='password'
-                    name='password'
-                    placeholder='Contraseña'
-                    value={password}
-                    onChange={ev => setPassword(ev.target.value)}
-                ></input>
-                <button type='submit'>Iniciar Sesión</button>
-            </form>
+            <NavLoginRegister type="register" />
 
-            {showModal && (
-                <ModalExito
-                    msg={mensaje}
-                    onClose={handleModalClose}
-                />
-            )}
+            <Container className='d-flex align-items-center flex-column mt-2'>
+                <div className="custom-card-login">
+                    <div className="custom-card-login2 d-flex align-items-center text-center">
+                        <form
+                            onSubmit={ev => {
+                                ev.preventDefault();
+                                handleLogin(user, password);
+                            }}>
+                                <h2>LOGIN</h2>
+                            <Row>
+                                <Col xl={5} className='p-1 mx-1'>
+                                    <input
+                                        className='input-generico'
+                                        type='user'
+                                        name='user'
+                                        placeholder='User'
+                                        autoComplete='off'
+                                        value={user}
+                                        onChange={ev => setUser(ev.target.value)}
+                                    ></input>
+                                </Col>
+                                <Col xl={5} className='p-1 m-1'>
+                                    <input
+                                        className='input-generico'
+                                        type='password'
+                                        name='password'
+                                        placeholder='Contraseña'
+                                        value={password}
+                                        onChange={ev => setPassword(ev.target.value)}
+                                    ></input>
+                                </Col>
+                                <Col xl={2} className='p-1 m-1'>
+                                    <button className='btt-generico' type='submit'>Iniciar Sesión</button>
+                                </Col>
+                                {showModal && (
+                                    <ModalExito
+                                        msg={mensaje}
+                                        onClose={handleModalClose}
+                                    />
+                                )}
+                            </Row>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </Container>
         </>
     )
 }

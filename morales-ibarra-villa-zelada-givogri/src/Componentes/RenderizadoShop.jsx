@@ -5,6 +5,7 @@ import model3 from '../Img/teslaModel3.avif';
 import modelX from '../Img/teslaModelX.avif';
 import modelY from '../Img/teslaModelY.avif';
 import { Button, Container } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 
 function RenderizadoShop() {
@@ -28,6 +29,11 @@ function RenderizadoShop() {
         );
         setFilteredModels(filtered);
     };
+
+    const navigate = useNavigate();
+    const handleNavError = () => {
+        navigate('/error')
+    }
 
     return (
         <>
@@ -76,7 +82,7 @@ function RenderizadoShop() {
                                 ) : (
                                     <p className='no-disponible'>No disponible</p>
                                 )}
-                                <Button variant='primary' className='my-1'>Ver más</Button>
+                                <Button onClick={handleNavError} variant='dark' className='my-1 btt-generico'>Ver más</Button>
                             </div>
                         </div>
                     </div>

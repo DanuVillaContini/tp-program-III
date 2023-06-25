@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import ModalExito from '../Componentes/ModalExito';
+import { Col, Container, Row } from 'react-bootstrap';
+import NavLoginRegister from '../Componentes/NavLoginRegister';
 
 function Register() {
     const [email, setEmail] = useState('')
@@ -7,7 +9,7 @@ function Register() {
     const [user, setUser] = useState('')
     const [showModal, setShowModal] = useState(false);
     const [registroExitoso, setRegistroExitoso] = useState(false);
-    const [datosUserArray, setDatosUserArray] =useState([]);
+    const [datosUserArray, setDatosUserArray] = useState([]);
 
     useEffect(() => {
         if (registroExitoso) {
@@ -20,7 +22,7 @@ function Register() {
     };
 
     const handleRegister = (email, password, user) => {
-        const datosUser = {email,password, user}
+        const datosUser = { email, password, user }
 
         //Pregunto si ya existe un localStorage para recien guardar el nuevo user
         const existeLocal = localStorage.getItem('datosUserArray');
@@ -44,13 +46,17 @@ function Register() {
             localStorage.setItem('datosUserArray', JSON.stringify(actualizarNewRegister));
 
 
-        } else{
+        } else {
             // Si no existe el array en el localStorage, creamos uno nuevo
             const newData = [datosUser];
             // Guardar los nuevos datos en el localStorage
             localStorage.setItem('datosUserArray', JSON.stringify(newData));
         }
 
+        // Vaciar los campos de los inputs después de un registro exitoso
+        setEmail('');
+        setPassword('');
+        setUser('');
         // Simular un registro exitoso
         setRegistroExitoso(true);
     };
@@ -64,47 +70,70 @@ function Register() {
 
     return (
         <>
-            <form
-                onSubmit={ev => {
-                    ev.preventDefault();
-                    handleRegister(email, password, user);
-                }}>
-                <input
-                    type='email'
-                    name='email'
-                    placeholder='Email'
-                    required
-                    autoComplete='off'
-                    value={email}
-                    onChange={ev => setEmail(ev.target.value)}
-                ></input>
-                <input
-                    type='password'
-                    name='password'
-                    placeholder='Contraseña'
-                    required
-                    value={password}
-                    onChange={ev => setPassword(ev.target.value)}
-                ></input>
-                <input
-                    type='text'
-                    name='user'
-                    placeholder='Usuario'
-                    required
-                    autoComplete='off'
-                    value={user}
-                    onChange={ev => setUser(ev.target.value)}
-                ></input>
-                <button type='submit'>Registrarse</button>
-            </form>
+            <NavLoginRegister type="login" />
+            <Container className='d-flex align-items-center flex-column mt-2'>
+                <div className="custom-card-login">
+                    <div className="custom-card-login2 d-flex align-items-center text-center">
+                        <form
+                            onSubmit={ev => {
+                                ev.preventDefault();
+                                handleRegister(email, password, user);
+                            }}>
+                            <h2>REGISTER</h2>
+                            <Row>
+                                <Col xl={5} className='p-1 mx-1'>
+                                    <input
+                                        className='input-generico'
+                                        type='email'
+                                        name='email'
+                                        placeholder='Email'
+                                        required
+                                        autoComplete='off'
+                                        value={email}
+                                        onChange={ev => setEmail(ev.target.value)}
+                                    ></input>
+                                </Col>
+                                <Col xl={5} className='p-1 m-1'>
+                                    <input
+                                        className='input-generico'
+                                        type='password'
+                                        name='password'
+                                        placeholder='Contraseña'
+                                        required
+                                        value={password}
+                                        onChange={ev => setPassword(ev.target.value)}
+                                    ></input>
+                                </Col>
+                                <Col xl={5} className='p-1 m-1'>
+                                    <input
+                                        className='input-generico'
+                                        type='text'
+                                        name='user'
+                                        placeholder='Usuario'
+                                        required
+                                        autoComplete='off'
+                                        value={user}
+                                        onChange={ev => setUser(ev.target.value)}
+                                    ></input>
+                                </Col>
+                                <Col xl={2} className='p-1 m-1'>
+                                    <button className='btt-generico' type='submit'>Registrarse</button>
+                                </Col>
+                                {showModal && (
+                                    <ModalExito
+                                        resp={registroExitoso}
+                                        onClose={handleModalClose}
+                                        msg={mensaje}
+                                    />
+                                )}
+                            </Row>
+                        </form>
 
-            {showModal && (
-                <ModalExito
-                    resp={registroExitoso}
-                    onClose={handleModalClose}
-                    msg={mensaje}
-                />
-            )}
+                    </div>
+
+                </div>
+
+            </Container>
         </>
     )
 }
