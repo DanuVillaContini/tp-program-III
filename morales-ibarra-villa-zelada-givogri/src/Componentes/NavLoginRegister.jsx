@@ -1,5 +1,7 @@
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import logoTesla from '../Img/logoTesla.png';
+
 
 function NavLoginRegister(props) {
 
@@ -18,14 +20,16 @@ function NavLoginRegister(props) {
         <>
             <Navbar bg="dark" variant="dark" sticky="top">
                 <Container>
+                    <Navbar.Collapse className="justify-content-start">
+                        <Navbar.Text>
+                            <a href="/" > <img src={logoTesla} alt="" className='logoTesla' /> </a>
+                        </Navbar.Text>
+                    </Navbar.Collapse>
                     <Nav className="me-auto">
-                        <Nav.Link href="/">Home</Nav.Link>
-                    </Nav>
-                    <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
                             <Link to={linkPath}>{linkText}</Link>
                         </Navbar.Text>
-                    </Navbar.Collapse>
+                    </Nav>
                 </Container>
             </Navbar>
         </>

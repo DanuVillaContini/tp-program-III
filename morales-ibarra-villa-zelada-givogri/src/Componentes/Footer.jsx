@@ -1,20 +1,20 @@
-import { Container, Row} from "react-bootstrap"
-
+import { Container, Row } from "react-bootstrap"
+import logoTesla from '../Img/logoTesla.png';
 
 function Footer() {
     return (
         <>
-        <footer className="mt-2 p-2">
-            <Container className="text-center">
-                <Row className="my-2">
-                    <h2>UTN - FRT</h2>
-                    <span>Todos los derechos Reservados &copy;</span>
-                </Row>
-                <Row className="my-2">
-
-                </Row>
-            </Container>
-        </footer>
+            <footer className="mt-0 p-0">
+                <Container className="text-center">
+                    <Row className="my-2">
+                        <img src={logoTesla} className="logoFooter" alt=""></img>
+                        <h6>Tesla &copy; All rights reserved</h6>
+                    </Row>
+                    {/* <Row className="my-2">
+                    <BasicGroupButtons/>
+                </Row> */}
+                </Container>
+            </footer>
         </>
     )
 }

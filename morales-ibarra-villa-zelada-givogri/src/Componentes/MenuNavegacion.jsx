@@ -1,22 +1,23 @@
 import { Container, Navbar, Nav } from 'react-bootstrap'
+import logoTesla from '../Img/logoTesla.png';
 
 
 function MenuNavegacion() {
     return (
         <>
-            <Navbar bg="dark" variant="dark" sticky="top">
+            <Navbar bg="black" variant="dark" sticky="top">
                 <Container>
-                    <Nav className="me-auto">
-                        <Nav.Link href="/">Inicio</Nav.Link>
-                        <Nav.Link href="/aboutus">About us</Nav.Link>
-                        <Nav.Link href="/shop">Shop</Nav.Link>
-                        <Nav.Link href="/register">Registrarse</Nav.Link>
-                    </Nav>
-                    <Navbar.Collapse className="justify-content-end">
+                    <Navbar.Collapse className="justify-content-start">
                         <Navbar.Text>
-                            Mi Perfil : <a href='/login'>Log in</a>
+                            <a href="/" > <img src={logoTesla} alt="" className='logoTesla' /> </a>
                         </Navbar.Text>
                     </Navbar.Collapse>
+                    <Nav className="me-auto">
+                        <Nav.Link href="/Shop">Shop</Nav.Link>
+                        <Nav.Link href="/aboutUs">About us</Nav.Link>
+                        <Nav.Link href="/login">Login</Nav.Link>
+                        <Nav.Link href="/register">Register</Nav.Link>
+                    </Nav>
                 </Container>
             </Navbar>
         </>

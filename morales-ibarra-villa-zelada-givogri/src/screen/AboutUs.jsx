@@ -1,10 +1,10 @@
 import MenuNavegacion from '../Componentes/MenuNavegacion';
 
-import AvatarUno from "../Img/avatar1.png";
+import AvatarUno from "../Img/avatarDani.jpg";
 import AvatarDos from "../Img/avatar2.png";
 import AvatarTres from "../Img/avatar3.png";
-import AvatarCua from "../Img/avatar4.png";
-import AvatarCin from "../Img/avatar5.png";
+import AvatarCua from "../Img/avatarAgustin.png";
+import AvatarCin from "../Img/avatarSanti.png";
 
 function AboutUs() {
 

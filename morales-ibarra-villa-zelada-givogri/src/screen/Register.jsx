@@ -80,10 +80,10 @@ function Register() {
                                 handleRegister(email, password, user);
                             }}>
                             <h2>REGISTER</h2>
-                            <Row>
-                                <Col xl={5} className='p-1 mx-1'>
+                            <Row className='d-flex justify-content-center flex-column align-items-center p-1'>
+                                <Col xl={8} className='p-1 mx-2 px-5 '>
                                     <input
-                                        className='input-generico'
+                                        className='input-generico p-2 m-2'
                                         type='email'
                                         name='email'
                                         placeholder='Email'
@@ -92,10 +92,8 @@ function Register() {
                                         value={email}
                                         onChange={ev => setEmail(ev.target.value)}
                                     ></input>
-                                </Col>
-                                <Col xl={5} className='p-1 m-1'>
                                     <input
-                                        className='input-generico'
+                                        className='input-generico p-2 m-2'
                                         type='password'
                                         name='password'
                                         placeholder='Contraseña'
@@ -103,10 +101,8 @@ function Register() {
                                         value={password}
                                         onChange={ev => setPassword(ev.target.value)}
                                     ></input>
-                                </Col>
-                                <Col xl={5} className='p-1 m-1'>
                                     <input
-                                        className='input-generico'
+                                        className='input-generico p-2 m-2'
                                         type='text'
                                         name='user'
                                         placeholder='Usuario'
@@ -116,7 +112,8 @@ function Register() {
                                         onChange={ev => setUser(ev.target.value)}
                                     ></input>
                                 </Col>
-                                <Col xl={2} className='p-1 m-1'>
+
+                                <Col xl={4} className='p-1 m-1'>
                                     <button className='btt-generico' type='submit'>Registrarse</button>
                                 </Col>
                                 {showModal && (

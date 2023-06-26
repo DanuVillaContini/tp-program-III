@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ModalExito from '../Componentes/ModalExito';
 import { useNavigate } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';
-import MenuNavegacion from '../Componentes/MenuNavegacion';
+// import MenuNavegacion from '../Componentes/MenuNavegacion';
 import NavLoginRegister from '../Componentes/NavLoginRegister';
 
 
@@ -62,11 +62,11 @@ function Login() {
                                 ev.preventDefault();
                                 handleLogin(user, password);
                             }}>
-                                <h2>LOGIN</h2>
-                            <Row>
-                                <Col xl={5} className='p-1 mx-1'>
+                            <h2>LOGIN</h2>
+                            <Row className='d-flex justify-content-center flex-column align-items-center p-1'>
+                                <Col xl={8} className='p-1 mx-2 px-5 '>
                                     <input
-                                        className='input-generico'
+                                        className='input-generico p-2 m-2'
                                         type='user'
                                         name='user'
                                         placeholder='User'
@@ -74,10 +74,8 @@ function Login() {
                                         value={user}
                                         onChange={ev => setUser(ev.target.value)}
                                     ></input>
-                                </Col>
-                                <Col xl={5} className='p-1 m-1'>
                                     <input
-                                        className='input-generico'
+                                        className='input-generico p-2 m-2'
                                         type='password'
                                         name='password'
                                         placeholder='Contraseña'
@@ -85,7 +83,7 @@ function Login() {
                                         onChange={ev => setPassword(ev.target.value)}
                                     ></input>
                                 </Col>
-                                <Col xl={2} className='p-1 m-1'>
+                                <Col xl={4} className='p-1 m-1'>
                                     <button className='btt-generico' type='submit'>Iniciar Sesión</button>
                                 </Col>
                                 {showModal && (
